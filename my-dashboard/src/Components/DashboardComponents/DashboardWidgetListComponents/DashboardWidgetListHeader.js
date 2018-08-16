@@ -1,6 +1,6 @@
 import React from "react";
 
-const DashboardItemsListHeader = () => {
+const DashboardWidgetListHeader = () => {
   return (
     <div>
       <button>Small Items</button>
@@ -10,4 +10,4 @@ const DashboardItemsListHeader = () => {
   );
 };
 
-export default DashboardItemsListHeader;
+export default DashboardWidgetListHeader;

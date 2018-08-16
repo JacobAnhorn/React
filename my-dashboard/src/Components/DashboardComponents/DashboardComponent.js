@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import DashboardItemsListComponent from "./DashboardItemsListComponents/DashboardItemsListComponent";
+import DashboardWidgetListComponent from "./DashboardWidgetListComponents/DashboardWidgetListComponent";
 
 class DashboardComponent extends Component {
   render() {
-    return <DashboardItemsListComponent />;
+    return <DashboardWidgetListComponent />;
   }
 }
 
