@@ -1,5 +1,7 @@
 const InitialState = {
-  areaTypes: ["temp"]
+  areaTypes: ["temp"],
+  areaSize: 16,
+  isSelectingWidget: false
 };
 
 export default InitialState;

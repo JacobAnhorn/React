@@ -1,1 +1,2 @@
 export const ADD_AREA = "ADD_AREA";
+export const SHOW_OR_HIDE_WIDGETS_FOR_AREA = "SHOW_WIDGETS_FOR_AREA";

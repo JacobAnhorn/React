@@ -13,15 +13,17 @@ class DashboardComponent extends Component {
       <React.Fragment>
         <DashboardHeaderComponent />
         {areas}
-        <DashboardWidgetListComponent />
+        {this.props.isSelectingWidget ? <DashboardWidgetListComponent /> : null}
       </React.Fragment>
     );
   }
 }
 
 function mapStateToProps(state) {
+  console.log(state);
   return {
-    areas: state.areaInformation.areaTypes
+    areas: state.areaInformation.areaTypes,
+    isSelectingWidget: state.areaInformation.isSelectingWidget
   };
 }
 
