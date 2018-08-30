@@ -4,6 +4,13 @@ import DashboardHeaderComponent from "./DashboardHeaderComponent";
 import DashboardAreaComponent from "./DashboardAreaComponents/DashboardAreaComponent";
 import { connect } from "react-redux";
 
+const widgetAreas = {
+  display: "flex",
+  height: "90vh",
+  bottom: "0",
+  width: "100%"
+};
+
 class DashboardComponent extends Component {
   render() {
     let areas = this.props.areas.map((name, index) => {
@@ -12,8 +19,12 @@ class DashboardComponent extends Component {
     return (
       <React.Fragment>
         <DashboardHeaderComponent />
-        {areas}
-        {this.props.isSelectingWidget ? <DashboardWidgetListComponent /> : null}
+        <div style={widgetAreas}>
+          {areas}
+          {this.props.isSelectingWidget ? (
+            <DashboardWidgetListComponent />
+          ) : null}
+        </div>
       </React.Fragment>
     );
   }

@@ -18,13 +18,13 @@ function TabContainer({ children, dir }) {
   );
 }
 
-const buildTestItems = () => {
-  var list = [];
-  for (var i = 0; i < 10; i++) {
-    list.push(<DashboardWidgetComponent key={i} />);
-  }
-  return list;
-};
+// const buildTestItems = () => {
+//   var list = [];
+//   for (var i = 0; i < 10; i++) {
+//     list.push(<DashboardWidgetComponent key={i} />);
+//   }
+//   return list;
+// };
 
 const styles = theme => ({
   root: {
@@ -56,26 +56,34 @@ class DashboardWidgetListComponent extends React.Component {
   render() {
     const { theme } = this.props;
     return (
-      <ClickAwayListener
-        onClickAway={() =>
-          this.props.areaActions.showWidgetSelectionForArea(false)
-        }
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          width: "100%"
+        }}
       >
-        <DashboardWidgetListHeader
-          index={this.state.index}
-          handleChange={this.handleChange}
-        />
-        <SwipeableViews
-          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-          index={this.state.index}
-          onChangeIndex={this.handleIndexChange}
+        <ClickAwayListener
+          onClickAway={() =>
+            this.props.areaActions.showWidgetSelectionForArea(false)
+          }
         >
-          <TabContainer dir={theme.direction}>Item One</TabContainer>
-          <TabContainer dir={theme.direction}>Item Two</TabContainer>
-          <TabContainer dir={theme.direction}>Item Three</TabContainer>
-        </SwipeableViews>
-        {buildTestItems()}
-      </ClickAwayListener>
+          <DashboardWidgetListHeader
+            index={this.state.index}
+            handleChange={this.handleChange}
+          />
+          <SwipeableViews
+            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+            index={this.state.index}
+            onChangeIndex={this.handleIndexChange}
+          >
+            <TabContainer dir={theme.direction}>Item One</TabContainer>
+            <TabContainer dir={theme.direction}>Item Two</TabContainer>
+            <TabContainer dir={theme.direction}>Item Three</TabContainer>
+          </SwipeableViews>
+          {/*buildTestItems()*/}
+        </ClickAwayListener>
+      </div>
     );
   }
 }
