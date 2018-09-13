@@ -1,6 +1,6 @@
 const InitialState = {
-  areaTypes: ["temp"],
-  areaSize: 16,
+  areaTypes: ["large"],
+  areaSize: 12,
   isSelectingWidget: false
 };
 

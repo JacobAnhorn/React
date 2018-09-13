@@ -31,7 +31,7 @@ class DashboardComponent extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state);
+  //console.log(state);
   return {
     areas: state.areaInformation.areaTypes,
     isSelectingWidget: state.areaInformation.isSelectingWidget

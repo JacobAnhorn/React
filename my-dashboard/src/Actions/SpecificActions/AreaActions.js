@@ -1,7 +1,7 @@
 import * as Actions from "../ActionTypes";
 
-export const addArea = () => {
-  return { type: Actions.ADD_AREA, areaType: "temp" };
+export const addArea = (size) => {
+  return { type: Actions.ADD_AREA, areaType: size };
 };
 
 export const showWidgetSelectionForArea = isSelectingWidget => {
